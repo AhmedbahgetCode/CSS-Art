@@ -24,15 +24,39 @@ body {
 }
 
 /* lights */
-.pokimon .topLight {
+.topLight {
     position: absolute;
-    top: 35px;
-    left: 29px;
+    top: 31px;
+    left: 33px;
 
     width: 139px;
-    height: 70px;
+    height: 80px;
 
     background-color: #fff;
     border-radius: 50%;
-    transform: rotate(-39deg);
+    transform: rotate(-35deg);
+}
+
+.bottomLight {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    
+    width: 340px;
+    height: 170px;
+    border-radius: 0 0 200px 200px;
+    
+    background: #fff;
+}
+
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 90px;
+
+    background: red;
 }
