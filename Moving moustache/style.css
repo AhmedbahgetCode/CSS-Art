@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    color: black;
+    border-radius: 65px;
+    position: relative;
+}
+
+/* moustash */
+.wrapper::before,
+.wrapper::after {
+    content: '';
+    border-bottom: 125px solid currentColor;
+    border-radius: 0 0 0 100%;
+
+    width: 125px;
+    aspect-ratio: 1;
+
+    position: absolute;
+    left: -57.5px;
+    top: -100%;
+
+    transform-origin: 100% 187.5px;
+    animation: alternate infinite left-animation 1s ease-in-out;
+}
+
+.wrapper::after {
+    left: auto;
+    right: -57.5px;
+
+    border-radius: 0 0 100% 0;
+    transform-origin: 0 187.5px;
+    animation: alternate infinite right-animation 1s ease-in-out;
+}
+
+/* balls */
+.ball {
+    background: currentColor;
+    aspect-ratio: 1;
+    width: 125px;
+    border-radius: 50%;
+}
+
+.ball:first-child {
+    transform: translate(5px);
+}
+
+.ball:last-child {
+    transform: translate(-5px);
+}
+
+/* animations */
+@keyframes left-animation {
+    from {
+        transform: rotate(-50deg);
+    }
+    to {
+        transform: rotate(-80deg);
+    }
+}
+
+@keyframes right-animation {
+     from {
+        transform: rotate(50deg);
+    }
+    to {
+        transform: rotate(80deg);
+    }
+}

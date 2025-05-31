@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5f1cf8;
+}
+
+/* main pokimon */
+.pokimon {
+    min-width: 400px;
+    aspect-ratio: 1;
+    border: solid 4px black;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px 2px #fff3ac;
+    background: linear-gradient(to bottom, #ee4035 50%, #a29e9f 50%);
+    position: relative;
+}
+
+/* lights */
+.pokimon .topLight {
+    position: absolute;
+    top: 35px;
+    left: 29px;
+
+    width: 139px;
+    height: 70px;
+
+    background-color: #fff;
+    border-radius: 50%;
+    transform: rotate(-39deg);
+}
